@@ -14,16 +14,18 @@ export default function Button({children, onClick, style = null}) {
 
 const styles = StyleSheet.create({
   button: {
-    paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
     backgroundColor: '#47b778',
     borderRadius: 12,
     color: '#fff',
     margin: 10,
+    minWidth: 100,
   },
   text: {
     color: '#fff',
     fontSize: 16,
     fontFamily: 'OpenSans-Regular',
+    textAlign: 'center',
   },
 });

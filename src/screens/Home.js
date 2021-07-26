@@ -20,6 +20,7 @@ export default function Home() {
             <Chip title="💎 Motivation" />
             <Chip title="🎉 Party" />
             <Chip title="♥️ Dating" />
+            <View style={{width: 40}} />
           </ScrollView>
         </View>
         <View style={{flex: 1}}>
@@ -27,39 +28,23 @@ export default function Home() {
             <View style={{height: 280}}>
               <AskCard />
             </View>
-            <View style={{height: 280}}>
-              <View
-                style={{
-                  height: 60,
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  paddingHorizontal: 20,
-                }}>
-                <Text
-                  style={{
-                    color: '#fff',
-                    fontSize: 20,
-                    fontFamily: 'OpenSans-Regular',
-                  }}>
-                  Popular Questions
-                </Text>
-                <Text
-                  style={{
-                    color: 'rgba(255,255,255,0.5)',
-                    fontSize: 14,
-                    fontFamily: 'OpenSans-Regular',
-                  }}>
-                  View all
-                </Text>
+            <View style={{height: 240}}>
+              <View style={styles.titleBar}>
+                <Text style={styles.populatQuetions}>Popular Questions</Text>
+                <Text style={styles.viewAll}>View all</Text>
               </View>
 
-              <View style={{flex: 1}}>
-                <ScrollView horizontal style={{paddingHorizontal: 20}}>
+              <View style={{flex: 1, width: '100%'}}>
+                <ScrollView
+                  showsHorizontalScrollIndicator={false}
+                  horizontal
+                  style={{paddingHorizontal: 20, paddingRight: 100}}>
                   <Post desc="UFO is not real. do you agree with that?" />
                   <Post desc="What do you think about illuminati" />
                   <Post desc="Who is binod" />
                   <Post desc="UFO is not real. do you agree with that?" />
                   <Post desc="UFO is not real. do you agree with that?" />
+                  <View style={{width: 40}} />
                 </ScrollView>
               </View>
             </View>
@@ -87,5 +72,21 @@ const styles = StyleSheet.create({
   topics: {
     height: 60,
     width: '100%',
+  },
+  titleBar: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  populatQuetions: {
+    color: '#fff',
+    fontSize: 20,
+    fontFamily: 'OpenSans-Regular',
+  },
+  viewAll: {
+    color: 'rgba(255,255,255,0.5)',
+    fontSize: 14,
+    fontFamily: 'OpenSans-Regular',
   },
 });
